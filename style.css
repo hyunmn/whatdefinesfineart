@@ -1,0 +1,223 @@
+/* Styling for images inside draggable elements */
+img {
+  width: 70px;
+}
+
+/* Container for grid and draggable elements */
+.box {
+  display: flex;
+}
+
+/* Styling for draggable elements */
+.draggable {
+  position: absolute;
+  cursor: move;
+}
+.header {
+  cursor: move;
+  text-align: center;
+}
+
+/* Initial positions for draggable elements */
+#mydiv1 { top: 50px; left: 20px; }
+#mydiv2 { top: 120px; left: 20px; }
+#mydiv3 { top: 200px; left: 20px; }
+#mydiv4 { top: 280px; left: 20px; }
+#mydiv5 { top: 360px; left: 20px; }
+#mydiv6 { top: 440px; left: 20px; }
+#mydiv7 { top: 525px; left: 20px; }
+#mydiv8 { top: 600px; left: 20px; }
+#mydiv9 { top: 680px; left: 20px; }
+#mydiv10 { top: 760px; left: 20px; }
+#mydiv11 { top: 840px; left: 20px; }
+#mydiv12 { top: 910px; left: 20px; }
+
+#mydiv13 { top: 50px;  left: 100px; }
+#mydiv14 { top: 120px; left: 100px; }
+#mydiv15 { top: 200px; left: 100px; }
+#mydiv16 { top: 280px; left: 100px; }
+#mydiv17 { top: 360px; left: 100px; }
+#mydiv18 { top: 440px; left: 100px; }
+#mydiv19 { top: 525px; left: 100px; }
+#mydiv20 { top: 600px; left: 100px; }
+#mydiv21 { top: 680px; left: 100px; }
+#mydiv22 { top: 760px; left: 100px; }
+#mydiv23 { top: 840px; left: 100px; }
+#mydiv24 { top: 910px; left: 100px; }
+
+/* General body styling */
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: rgb(240, 239, 239);
+}
+
+/* Container for the zones */
+.container {
+  position: absolute;
+  right: 0; /* Align the container to the right */
+  width: 85%; /* Occupy 85% of the width */
+  height: 100vh; /* Full height */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-rows: 1fr 1fr; /* Two equal rows */
+}
+
+/* Grid lines */
+.grid-line {
+  position: absolute;
+  background-color: black;
+}
+
+/* Horizontal grid line */
+.horizontal-line {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px; /* Thickness of the line */
+}
+
+/* Vertical grid line */
+.vertical-line {
+  left: 50%;
+  top: 0;
+  height: 100vh;
+  width: 1px; /* Thickness of the line */
+}
+
+/* Axis text styles */
+.y-axis-text, .x-axis-text-right, .y-axis-text-top, .x-axis-text-left {
+  position: absolute;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 24px;
+  background-color: rgb(240, 239, 239);
+  color: black;
+  z-index: 1000;
+  padding: 5px;
+}
+
+.y-axis-text {
+  bottom: 0;
+  left: 47%;
+}
+
+.x-axis-text-right {
+  top: 48%;
+  right: 0;
+}
+
+.y-axis-text-top {
+  top: 0;
+  left: 46.5%;
+}
+
+.x-axis-text-left {
+  top: 48%;
+  left: 0;
+}
+
+/* Drop zones */
+.drop-zone {
+  display: flex;
+}
+
+/* Zone text */
+#zone-text1 {
+  position: relative;
+  left: 0;
+  top: -80px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 80px;
+}
+
+#zone-text2 {
+  position: absolute;
+  transform: rotate(90deg);
+  top: 10px;
+  right: -75px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 80px;
+}
+
+#zone-text4 {
+  position: absolute;
+  transform: rotate(180deg);
+  bottom: -80px;
+  right: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 80px;
+}
+
+#zone-text3 {
+  position: absolute;
+  transform: rotate(270deg);
+  bottom: -35px;
+  left: -45px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 80px;
+}
+
+/* Popup text shown on hover */
+.popup-text {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  color: #fff;
+  padding: 5px;
+  z-index: 100000;
+  font-family: 'Arial Narrow', sans-serif;
+  font-size: 16px;
+}
+
+/* Show popup on hover */
+.draggable:hover .popup-text {
+  display: block;
+}
+
+/* Draggable hover effect */
+.draggable:hover {
+  box-shadow: 0 0 50px rgb(6, 255, 180);
+}
+
+/* Paragraph styling */
+.para {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  background-color: rgb(6, 255, 180);
+  box-shadow: 0 0 25px rgb(6, 255, 180);
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  position: absolute;
+  top: -3px;
+  left: 10px;
+}
+
+.bottompara{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  background-color: rgb(6, 255, 180);
+  box-shadow: 0 0 25px rgb(6, 255, 180);
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  position: absolute;
+  bottom:0px;
+  left: 10px;
+}
+
+.refresh-button {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  background-color: rgb(6, 255, 180);
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  border: none;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.refresh-button:hover {
+  box-shadow: 0 0 25px rgb(6, 255, 180);
+}
+
+
